@@ -19,6 +19,12 @@ public class Example : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        transform.eulerAngles += new Vector3(speed, 0, 0);
+        //transform.eulerAngles += new Vector3(speed, 0, 0);
+        //transform.Rotate(Vector3.up, Space.World);
+    }
+
+    public void Jump()
+    {
+        GetComponent<Rigidbody>().AddForce(0, speed, 0);
     }
 }
